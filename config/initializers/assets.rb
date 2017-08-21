@@ -10,10 +10,17 @@ Rails.application.config.assets.precompile += %w(
 	wechat.css 
 	wechat.js 
 
-	font-awesome.css
+	fonts/fontawesome-webfont.eot
+	fonts/fontawesome-webfont.svg
+	fonts/fontawesome-webfont.ttf
+	fonts/fontawesome-webfont.woff
+	fonts/fontawesome-webfont.woff2
+	fonts/fontawesome-webfont.otf
+
 	animate.css
 	bootsnav.css
 	bootstrap.min.css
+	font-awesome.min.css
 
 	home/style.css
 
