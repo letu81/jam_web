@@ -1,0 +1,42 @@
+<% if @order.blank? %>
+  alert('该订单不存在');
+<% else %>
+  var $btn1 = $("#order-detail-pay-button");
+  var $btn2 = $("#pay-button-<%= @order.order_no %>");
+  
+  <% if @jsapi_params.blank? %>
+    $btn1.text('去支付');
+    $btn1.data('loading', '0');
+    
+    $btn2.text('去支付');
+    $btn2.data('loading', '0');
+    
+    alert('发起微信支付失败，请稍后重试！');
+  <% else %>
+    wx.chooseWXPay({
+      timestamp: <%= @jsapi_params[:timeStamp] %>,
+      nonceStr: '<%= @jsapi_params[:nonceStr] %>',
+      package: '<%= @jsapi_params[:package] %>',
+      signType: '<%= @jsapi_params[:signType] %>',
+      paySign: '<%= @jsapi_params[:paySign] %>',
+      success: function (res) {
+        <% if @is_order_detail %>
+          $("#pay-tip-div").remove();
+          $("#order-state").text("待配送");
+        <% else %>
+          window.location.href = '<%= wechat_shop_order_path(@order.order_no) %>';
+        <% end %>
+      },
+      cancel: function (res) {
+        $btn1.text('去支付');
+        $btn1.data('loading', '0');
+    
+        $btn2.text('去支付');
+        $btn2.data('loading', '0');
+        
+        alert('支付未完成, 请尽快支付, 否则30分钟后系统会自动取消该订单');
+      }
+    });
+  <% end %>
+
+<% end %>

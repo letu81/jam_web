@@ -1,0 +1,32 @@
+<% cache ['order', order, order.state, order.product.updated_at] do %>
+<div class="order" onclick="showOrder(this);" data-order-no="<%= order.order_no %>">
+  <% if %W(canceled completed).include?(order.state.to_s) %>
+  <div class="nb-state-container rotate <%= order.state.to_s %>-state">
+    <%= render_order_state(order) %>
+  </div>
+  <% end %>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title"><%= order.created_at.strftime('%Y-%m-%d %H:%M:%S') %></h4>
+    </div>
+    <div class="panel-body">
+      <%= image_tag(order.product.images.first.url(:small), size: '60x60', class: 'pull-left') %>
+      <div class="base-info">
+        <h4 class="product-title"><%= order.product.title %></h4>
+        <p class="quantity">数量：<%= order.quantity %></p>
+      </div>
+    </div>
+    <div class="panel-footer">
+      <div class="pull-right">
+        <% unless %W(canceled completed).include?(order.state.to_s) %>
+        <span class="state">状态：<span class="green"><%= render_order_state(order) %></span></span>
+        <% end %>
+        <% if order.can_pay? %>
+        <a href="javascript:;" onclick="App.payment(event,this);" data-order-no="<%= order.order_no %>" class="pay-button label" data-remote="true" data-loading="0" data-order-detail="0" id="pay-button-<%= order.order_no %>">去支付</a>
+        <% end %>
+      </div>
+      <span class="fee">订单金额: ¥ <%= order.total_fee - order.discount_fee %></span>
+    </div>
+  </div>
+</div>
+<% end %>

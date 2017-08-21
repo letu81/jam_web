@@ -1,0 +1,24 @@
+<% cache ['tabbar', @current, 'v1'] do %>
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <ul class="wechat-shop-tabbar">
+    <li class="item-home <%= @current == 'home_index' ? "active" : "" %>">
+      <a href="<%= wechat_shop_root_path %>">
+        <div class="item-icon"></div>
+        <div class="item-title">首页</div>
+      </a>
+    </li>
+    <li class="item-order <%= %W(orders_index orders_no_pay orders_shipping).include?(@current) ? "active" : "" %>">
+      <a href="<%= orders_wechat_shop_user_path %>">
+        <div class="item-icon"></div>
+        <div class="item-title">我的订单</div>
+      </a>
+    </li>
+    <li class="item-user <%= @current == 'user_settings' ? "active" : "" %>">
+      <a href="<%= settings_wechat_shop_user_path %>">
+        <div class="item-icon"></div>
+        <div class="item-title">个人中心</div>
+      </a>
+    </li>
+  </ul>
+</nav>
+<% end %>

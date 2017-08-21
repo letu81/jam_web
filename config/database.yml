@@ -1,0 +1,17 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  pool: 5
+  username: root
+  password: 
+
+development:
+  <<: *default
+  database: rmt_dev
+production:
+  <<: *default
+  database: rmt_dev
+test:
+  <<: *default
+  database: rmt_dev

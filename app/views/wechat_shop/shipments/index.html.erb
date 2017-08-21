@@ -1,0 +1,37 @@
+<%= render_navbar_for('收货地址管理', 
+{ icon: 'fa fa-angle-left', link: "#{@from}" },
+{ icon: 'fa fa-plus', class: 'navbar-item-size', label: '+', link: "#{new_wechat_shop_shipment_path}"}) %>
+
+<div class="shipments">
+  <% if @shipments.empty? %>
+    <%= render_empty_result('没有收货地址!') %>
+  <% else %>
+    <table class="shipments-table">
+      <%= render @shipments %>
+    </table>
+  <% end %>
+</div>
+
+<% content_for :scripts do %>
+<script>
+function updateShipment(ele) {
+  var id = $(ele).parent().data('id');
+  $.ajax({
+    type: "PATCH",
+    url: "<%= update_current_shipment_wechat_shop_user_path %>",
+    data: {
+      shipment_id: id
+    }
+  }).done(function(result) {
+    if (result === '0') {
+      window.location.href = '<%= @from %>'
+    } else {
+      alert('设置地址失败');
+    }
+  });
+  return false;
+}
+
+</script>
+<% end %>
+  

@@ -1,0 +1,82 @@
+<%= render_navbar_for(@page_title, 
+  { icon: 'fa fa-angle-left', link: "#{wechat_shop_product_path(@order.product)}" },
+  { icon: 'fa fa-home nj-home', link: "#{wechat_shop_root_path}"}) %>
+
+<div class="new-order">  
+  <%= form_for [:wechat_shop, @order], remote: true do |f| %>
+  
+    <a class="input-item" href="<%= wechat_shop_shipments_path(from: new_wechat_shop_order_path) %>">
+      <%= render_shipment_info %>
+    </a>
+    <div class="empty-section"></div>
+    <div class="input-item product-info">
+      <table class="product-info-table">
+        <tr>
+          <td class="product-image">
+            <%= image_tag @order.product.images.first.url(:small), class: 'product-image' %>
+          </td>
+          <td class="product-caption">
+            <p class="product-title"><%= @order.product.title %></p>
+            <p><span class="green">¥<%= @order.product.price %></span> × <%= @order.quantity %></p>
+          </td>
+        </tr>
+      </table>
+    </div>
+    
+    <div class="input-item shipment-intro-item">
+      <p class="shipment-intro">配送说明：<%= SiteConfig.ship_and_stock_info %></p>
+      <%= f.text_field :note, placeholder: '订单备注', class: 'note-field' %>
+    </div>
+    <div class="empty-section"></div>
+    <a class="input-item" href="<%= wechat_shop_coupons_path(from: new_wechat_shop_order_path, pid: @order.product.id) %>">
+      <div class="pull-right right-arrow">
+        <span class="coupon-tips">
+          <% if @coupon.present? %>
+          <%= @coupon.title %>
+          <% else %>
+          <%= @coupon_counts %>个可用
+          <% end %>
+        </span><i class="fa fa-angle-right" style="font-size: 24px"></i>
+      </div>
+      <span style="font-size: 1.1em;">优惠券</span>
+    </a>
+    <div class="empty-section"></div>
+    <div class="input-item fee-info">
+      <table class="fee-info-table">
+        <tr>
+          <td class="td-label">商品金额</td>
+          <td class="td-value">¥ <%= @order.total_fee %></td>
+          <%= f.hidden_field :total_fee, value: @order.total_fee %>
+        </tr>
+        <tr>
+          <td class="td-label">运费</td>
+          <td class="td-value">免运费</td>
+        </tr>
+        <tr>
+          <td class="td-label">优惠</td>
+          <td class="td-value discount">-¥ <%= @order.discount_fee %></td>
+          <%= f.hidden_field :discount_fee, value: @order.discount_fee %>
+        </tr>
+        <tr>
+          <td class="td-label">应付金额</td>
+          <td class="td-value">¥ <%= @order.total_fee - @order.discount_fee %></td>
+        </tr>
+      </table>
+    </div>
+  <% end %>
+</div>
+
+<% content_for :toolbar do %>
+<nav class="navbar navbar-fixed-bottom wechat-shop-toolbar">
+  <div class="toolbar-item">
+    <div class="total-fee">
+      应付: ¥ <%= @order.total_fee - @order.discount_fee %>
+    </div>
+  </div>
+  <div class="toolbar-item pull-right">
+    <div class="pay">
+      <a href="javascript:;" onclick="App.payment(event, this);" id="order-payment-btn" data-loading="0" data-remote="true" data-order-no="">立即支付</a>
+    </div>
+  </div>
+</nav>
+<% end %>

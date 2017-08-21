@@ -44,5 +44,6 @@ bower.json
 .byebug_history
 .DS_Store
 .sample
+.keep
 /public/assets
 /public/uploads

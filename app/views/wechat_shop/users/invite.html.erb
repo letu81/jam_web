@@ -1,0 +1,23 @@
+<%= render_navbar_for('邀请朋友得优惠', 
+{ icon: 'fa fa-angle-left', link: "#{request.referer}" }) %>
+
+<div class="share-invite-icon">
+  <%= invite_icon_tag(@invite) %>
+</div>
+
+<div class="container">
+  
+  <div class="share-invite-body">
+    <%= @invite.body %>
+  </div>
+  
+  <div class="share-tip">
+    <h2 class="green">点击右上角分享得<%= @invite.inviter_coupon_value %>元奖励</h2>
+  </div>
+</div>
+
+<!--
+<div class="share-buttons">
+  <a href="javascript:;" class="share-friend share-button" onclick="shareFriend();">分享给朋友</a>
+  <a href="javascript:;" class="share-timeline share-button" onclick="shareTimeline();">分享到朋友圈</a>
+</div>-->

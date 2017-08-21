@@ -1,0 +1,29 @@
+.pages {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  
+  p {
+    padding: 0 10px;
+  }
+  
+  .qrcode {
+    margin-top: 20px;
+    padding: 0 20px;
+    text-align: center;
+    h2 {
+      font-size: 18px;
+    }
+    .qrcode-image {
+      width: 61.8%;
+      height: auto;
+    }
+  }
+}
+
+.qrcode-pages {
+  margin-top: -50px;
+}

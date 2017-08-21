@@ -1,0 +1,236 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@import "font-awesome";
+
+@import "wechat_shop/variables";
+@import "wechat_shop/home";
+@import "wechat_shop/products";
+@import "wechat_shop/orders";
+@import "wechat_shop/shipments";
+@import "wechat_shop/users";
+@import "wechat_shop/pages";
+@import "wechat_shop/coupons";
+@import "wechat_shop/events";
+
+h1,h2,h3,h4,h5,h6,p,img,ul,li,a,table,section,aside {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding-top: 50px;
+//  padding-bottom: 50px;
+//  background-color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.green {
+  color: $w_green;
+}
+
+.black {
+  color: $w_black;
+}
+
+.box {
+  width: 100%;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  padding: 10px;
+//  margin: 0 0 20px 0;
+  background-color: white;
+  border: 1px solid $w_borderColor; 
+}
+
+// 回首页按钮
+.nb-circle-button {
+  display: block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+  
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  z-index: 168;
+
+  background-color: rgba(0,0,0,0.7);
+  text-align: center;
+  color: white;
+  font-size: 1.3em;
+  &:hover {
+    color: white;
+  };
+}
+
+.wechat-shop-tabbar {
+  width: 100%;
+  
+  list-style: none;
+  clear: left;
+    
+  li {
+    float: left;
+    
+    width :33.333333%;
+    height: $w_tabbarHeight;
+    line-height: $w_tabbarHeight;
+    
+    text-align: center;
+    font-size: 1.2em;
+    border-right: 1px solid $w_borderColor;
+    &:last-child {
+      border: 0;
+    };
+    
+    .item-icon {
+      width: 100%;
+      height: $w_tabbarHeight / 2;
+//      background-color: green;
+    }
+    
+    .item-title {
+      width: 100%;
+      height: $w_tabbarHeight / 2;
+      line-height: $w_tabbarHeight / 2;
+      text-align: center;
+      font-size: 12px;
+//      background-color: red;
+    }
+    &.item-home {
+      .item-icon {
+        background: url(asset-path('wechat_shop/icon-home.gif')) no-repeat center bottom;
+        background-size: 21px;
+      }
+      
+    }
+  
+    &.item-order {
+      .item-icon {
+        background: url(asset-path('wechat_shop/icon-order.gif')) no-repeat center bottom;
+        background-size: 16px;
+      }
+      
+    }
+  
+    &.item-user {
+      .item-icon {
+        background: url(asset-path('wechat_shop/icon-user.gif')) no-repeat center bottom;
+        background-size: 16px;
+      }
+      
+    }
+    
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      color: $w_black;
+      text-decoration: none;
+//      text-indent: -9999px;
+    }
+        
+    &.active {
+      &.item-home {
+        .item-icon {
+          background: url(asset-path('wechat_shop/icon-home-active.gif')) no-repeat center bottom;
+          background-size: 21px;
+        }
+        
+      }
+      
+      &.item-order {
+        .item-icon {
+          background: url(asset-path('wechat_shop/icon-order-active.gif')) no-repeat center bottom;
+          background-size: 16px;
+        }
+        
+      }
+      
+      &.item-user {
+        .item-icon {
+          background: url(asset-path('wechat_shop/icon-user-active.gif')) no-repeat center bottom;
+          background-size: 16px;
+        }
+      }
+      a {
+        color: $w_green;
+      }
+      
+    }
+  }
+  
+}
+
+.wechat-shop-toolbar {
+  background-color: rgb(58,58,58);
+  clear: both;
+  
+  .toolbar-item {
+    float: left;
+    
+    width: 33.333333%;
+    height: $w_toolbarHeight;
+    line-height: $w_toolbarHeight;
+    text-align: center;
+    font-size: 1.2em;
+    color: white;
+  }
+}
+
+.empty-result-box {
+  padding: 10px 0;
+  width: 168px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: rgb(201,201,201);
+  border: 1px dashed rgb(201,201,201);
+  margin: 0 auto;
+  margin-top: 50%;
+}
+
+.navbar-item {
+  display: block;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  color: $w_black;
+  text-decoration: none;
+  font-size: 30px;
+  text-align: center;
+  &.navbar-item-left {
+    text-align: left;
+    padding-left: 15px;
+  }
+  &.navbar-item-right {
+    text-align: right;
+    padding-right: 15px;
+    text-decoration: none;
+  }
+}
+
+.navbar {
+  .navbar-item {
+    color: $w_black;
+  }
+}
+
+.navbar-title-view {
+  h2 {
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.2em;
+    font-weight: normal;
+    color: $w_black;
+  }
+  
+}

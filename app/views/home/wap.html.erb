@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>佳安美智控 - 安全、便捷、更省心</title>
+  <meta name="keywords" content="佳安美，深圳佳安美，智能家居，智能安防，智能网关，智能锁，指纹锁，密码锁，电子锁，app开锁，远程开锁，wifi，zigbee，蓝牙，433，RFID，射频识别，低功耗，无线，热点，双向，方案，定制，公众号，小程序" />
+  <meta name="description" content="佳安美，王力，盼盼，天地钩，万能互换，代理，加盟，六合一，记录，安全，便捷，省心，稳定，实惠，性价比高，好用，简洁，推荐，淘宝，天猫，京东，网购，值得买，优惠，团购，直销，原厂，专业" />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <%= stylesheet_link_tag 'wap/wap' %>
+</head>
+<body>
+<div class="overlay"></div>
+<div id="modal1" class="modal">
+  <%#= image_tag('wap/QR-ode.png') %></div>
+<div class="swiper-container">
+  <div class="header-top">
+      <div  style="  
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+  text-align: center;
+  font-family: 'ZagBoldRegular', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+  font-size: 32px;
+  color: #fff;
+  margin: 0;">佳安美智控</div>
+  </div>
+  <div class="swiper-wrapper">
+    <section class="swiper-slide swiperbj-a ">
+      <div class="swiper-Download ">
+        <a href="javascript:alert('敬请期待')" class="swiper-Download-a" title="敬请期待"><%= image_tag('home/ios.png', class: 'resize') %></a>
+        <a href="/download" class="swiper-Download-b"><%= image_tag('home/android.png', class: 'resize') %></a>
+      </div>
+    </section>
+<!--
+    <section class="swiper-slide swiperbj-b">
+      <div class="swiper-Downloada">
+      </div>
+    </section> -->
+  </div>
+  <%= image_tag('wap/arrow.png', id: 'array', class: 'pages') %>
+</div>
+<%= javascript_include_tag 'wap/swiper.min', 'wap/jquery.min', 'wap/jquery.modal' %>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        direction: 'vertical',
+        slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween: 30,
+        mousewheelControl: true
+
+    })
+</script>
+</body>
+</html>

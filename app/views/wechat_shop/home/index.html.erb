@@ -1,0 +1,32 @@
+<div class="container home-container">
+  <!-- div class="box home-help-link-container">
+    <a class="home-help-link" href="<%= wechat_shop_page_path('about') %>">佳安美：让家更安全
+      <span class="right-arrow pull-right">
+        <i class="fa fa-angle-right" style="font-size: 20px"></i>
+      </span>
+    </a>
+  </div -->
+  <%= render '/wechat_shop/home/banners' %>
+  
+  <div class="home-products">
+    <% cache ['home-products', @products.to_a, 'v2'] do %>
+      <% @products.each_with_index do |product, index| %>
+      <% cache ['home-product', product, index % 2 == 1, 'v2'] do %>
+      <div class="product <%= index % 2 == 1 ? "product-pull-right" : "" %>">
+        <a class="product-link" href="<%= wechat_shop_product_path(product) %>">
+          <%= image_tag product.images.first.url(:thumb) %>
+          <div class="product-info">
+            <div class="block-ellipsis"><%= product.title %></div>
+            <p><span class="price">¥ <%= product.price %></span></p>
+          </div>
+        </a>
+      </div>
+      <% end %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+<% content_for :tabbar do %>
+<%= render '/wechat_shop/shared/tabbar' %>
+<% end %>

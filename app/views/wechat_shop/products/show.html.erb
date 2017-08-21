@@ -1,0 +1,100 @@
+<%= render_navbar_for('产品详情', 
+  { icon: 'fa fa-angle-left', link: "#{wechat_shop_root_path}" }) %>
+
+<%= render '/wechat_shop/products/slides', product: @product %>
+
+<div class="product">
+  <%= render '/wechat_shop/products/product_base_info', product: @product %>
+  
+  <div class="vertical-divider"></div>
+  
+  <%= render '/wechat_shop/products/product_detail_info', product: @product %>
+</div>
+
+<% content_for :toolbar do %>
+
+<% cache @product do %>
+<nav class="navbar navbar-fixed-bottom wechat-shop-toolbar">
+  <div class="toolbar-item">
+    <div class="price">
+      ¥ <span id="total-fee" data-price='<%= @product.price %>'><%= @product.price %></span>
+    </div>
+  </div>
+  <div class="toolbar-item">
+    <div class="input-digit-control">
+      <a class="adds-on minus" href="javascript:;" onclick="changeDigit(false)">－</a>
+      <span class="digit" data-minimum='1' data-maximum='<%= [5, @product.stock].min %>' id="digit-control">1</span>
+      <a class="adds-on plus" href="javascript:;" onclick="changeDigit(true)">＋</a>
+    </div>
+  </div>
+  <div class="toolbar-item pull-right">
+    <div class="buy <%= @product.has_stock? ? '' : 'no-stock' %>">
+      <a href="javascript:;" onclick="checkout()"><%= @product.stock <= 0 ? '无货' : '立即购买' %></a>
+    </div>
+  </div>
+</nav>
+<% end %>
+
+<% end %>
+
+<% content_for :scripts do %>
+
+<script>
+
+// 添加手势查看
+// $(".carousel").swipe({
+//
+//   swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+//
+//     if (direction == 'left') $(this).carousel('next');
+//     if (direction == 'right') $(this).carousel('prev');
+//
+//   },
+//   allowPageScroll:"vertical"
+//
+// });
+
+function changeDigit(flag) {
+  // alert(flag);
+  var $digitControl = $('#digit-control');
+  var digit = parseInt($digitControl.text());
+  var min = parseInt($digitControl.data('minimum'));
+  var max = parseInt($digitControl.data('maximum'));
+
+  if (max <= 0) {
+    alert('该产品无货');
+    return false;
+  }
+  
+  if (flag) {
+    if ( digit < max ) {
+      digit ++;
+    } else {
+      alert('不能超过' + max);
+      return false;
+    }
+  } else {
+    if ( digit > min ) {
+      digit --;
+    } else {
+      alert('至少为' + min);
+      return false;
+    }
+  }
+  
+  $digitControl.text(digit);
+  
+  var price = parseInt($('#total-fee').data('price'));
+  $('#total-fee').text((price * digit));
+}
+
+function checkout() {
+  var stock = parseInt('<%= @product.stock %>');
+  if ( stock <= 0 ) {
+    return false;
+  }
+  
+  window.location.href = '<%= new_wechat_shop_order_path(pid: @product.id) %>' + '&q=' + $('#digit-control').text();
+}
+</script>
+<% end %>

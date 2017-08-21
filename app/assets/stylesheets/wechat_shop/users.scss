@@ -1,0 +1,165 @@
+.user-header {
+  margin-top: -50px;
+  width: 100%;
+  padding: 6% 0;
+  text-align: center;
+  background-color: $w_green;
+  .nickname {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: white;
+  }
+}
+
+.user-info {
+  margin-bottom: 50px;
+}
+
+.user-info-table {
+  width: 100%;
+  tr {
+//    padding: 20px;
+    border-bottom: 1px solid $w_borderColor;
+    cursor: pointer;
+  }
+  
+  .rewards {
+    margin: 0;
+    padding: 4px;
+    margin-right: 10px;
+    margin-top: 0;
+    background-color: red;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    -ms-border-radius: 2px;
+    color: white;
+    font-size: 0.6em;
+  }
+  
+  .fa-icon {
+    font-size: 1.2em;
+//    display: inline-block;
+  }
+  
+  .invite {
+    background: url(asset-path('wechat_shop/icon-invite.gif')) left center no-repeat;
+    background-size: 20px;
+  }
+  
+  .coupon {
+    background: url(asset-path('wechat_shop/icon-coupon.gif')) left center no-repeat;
+    background-size: 20px;
+  }
+  
+  .address {
+    background: url(asset-path('wechat_shop/icon-address.gif')) left center no-repeat;
+    background-size: 18px;
+  }
+  
+  .service {
+    background: url(asset-path('wechat_shop/icon-service.gif')) left center no-repeat;
+    background-size: 20px;
+  }
+  
+  .help {
+    background: url(asset-path('wechat_shop/icon-help.gif')) left center no-repeat;
+    background-size: 20px;
+  }
+  
+  .row-label-1 {
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    padding-left: 28px;
+//    background-color: red;
+  }
+  
+  td {
+    vertical-align: middle;
+    padding: 15px 0;
+    font-size: 1.2em;
+    color: $w_black;
+  }
+  
+  .cell-left {
+    padding-left: 15px;
+    width: 60%;
+  }
+  
+  .cell-right {
+    padding-right: 15px;
+    text-align: right;
+    vertical-align: middle;
+  }
+  
+  .blank-row-1 {
+//    height: 5px;
+    background-color: rgb(247,247,247);
+    td {
+      padding: 7px 0;
+    }
+  }
+  
+  .cell-label {
+    padding-left: 10px;
+  }
+}
+
+.share-invite-icon {
+//  margin: 0 auto;
+  text-align: center;
+//  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.share-invite-body {
+  padding: 0 20px;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.share-buttons {
+  width: 100%;
+  padding: 0 20px;
+  clear: both;
+  
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  
+  .share-button {
+    display: block;
+    float: left;
+    width: 48%;
+    height: 50px;
+    line-height: 50px;
+    margin-bottom: 15px;
+    text-align: center;
+    background-color: $w_green;
+    color: white;
+    text-decoration: none;
+    
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    -moz-border-radius: 6px;
+    
+    font-size: 16px;
+  }
+  
+  .share-timeline {
+    float: right;
+    background-color: rgb(236,164,73);//rgb(235,95,72);
+  }
+}
+
+.share-tip {
+  margin-top: 30px;
+  text-align: center;
+  h2 {
+    font-size: 1.5em;
+  }
+}

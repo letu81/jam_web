@@ -1,0 +1,33 @@
+<% cache ['segments', @current] do %>
+<div class="segments">
+  <%= link_to '全部订单', orders_wechat_shop_user_path, class: "segment-item #{@current == 'orders_index' ? "active" : ""}" %>
+  <%= link_to '待付款', no_pay_orders_wechat_shop_user_path, class: "segment-item #{@current == 'orders_no_pay' ? "active" : ""}" %>
+  <%= link_to '待收货', shipping_orders_wechat_shop_user_path, class: "segment-item #{@current == 'orders_shipping' ? "active" : ""}" %>
+</div>
+<% end %>
+
+<% if @orders.empty? %>
+<%= render_empty_result %>
+<% else %>
+  <div class="orders">
+    <% cache ['orders', @orders.to_a, @current, CacheVersion.product_latest_updated_at] do %>
+    <%= render @orders %>
+    <% end %>
+  </div>
+<% end %>
+
+<% content_for :tabbar do %>
+  <%= render '/wechat_shop/shared/tabbar' %>
+<% end %>
+
+<% content_for :scripts do %>
+
+<script>
+function showOrder(ele) {
+  var $ele = $(ele);
+  window.location.href = '<%= wechat_shop_root_path %>/orders/' + $ele.data('order-no');
+  return false;
+}
+
+</script>
+<% end %>
