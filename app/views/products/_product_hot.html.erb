@@ -14,7 +14,7 @@
 			<%- products.each do |product| -%>
 				<a href="/products/<%= product.id %>">
 			  		<li class="list-group-item">
-						<p class="center"><%#= image_tag img.url(:small) %></p>
+						<p class="center"><%= image_tag product.images.first.url(:small) %></p>
 			            <p class="center"><%= product.title %></p>
 			            <p class="center vip-price">¥ <%= product.price %></p>
 				    </li>

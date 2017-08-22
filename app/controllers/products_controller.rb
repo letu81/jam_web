@@ -13,17 +13,17 @@ class ProductsController < ApplicationController
     @product = Product.find(id)
     @hot_products = Product.saled.no_delete.except(id).sorted.limit(3)
     #fresh_when(etag: [@product])
-    render layout: false
+    render 'products/show', :layout => false
   end
 
   def lock
     #fresh_when(etag: [@product])
-	  render layout: false
+	  render 'products/show', :layout => false  
   end
 
   def show
     #fresh_when(etag: [@product])
-    render 'products/lock', :layout => false  
+    render :layout => false  
   end
 
   private
