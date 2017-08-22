@@ -1630,9 +1630,16 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1400px) {
     .footer-section {
         margin: 30px 5% 0 5% !important;
+        position: relative;
+    }
+}
+
+@media (min-width: 1401px) {
+    .footer-section {
+        margin: 30px 10% 0 10% !important;
         position: relative;
     }
 }
