@@ -1495,17 +1495,23 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
 
 @media (min-width: 1601px) {
     nav.navbar.bootsnav ul.nav > li > a{
-        padding: 30px 25px !important;
+        padding: 30px 35px !important;
     }
 }
 
 @media (min-width: 1401px) and (max-width: 1600px) {
     nav.navbar.bootsnav ul.nav > li > a{
+        padding: 30px 30px !important;
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1399px) {
+    nav.navbar.bootsnav ul.nav > li > a{
         padding: 30px 20px !important;
     }
 }
 
-@media (min-width: 1024px) and (max-width: 1400px) {
+@media (min-width: 1024px) and (max-width: 1279px) {
     nav.navbar.bootsnav ul.nav > li > a{
         padding: 30px 15px !important;
     }
