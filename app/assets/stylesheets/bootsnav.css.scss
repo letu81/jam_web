@@ -506,13 +506,29 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
     }
 }
 
+@media (min-width: 1024px) and (max-width:1199px) {
+    nav.navbar.bootsnav .navbar-brand {
+        display: inline-block;
+        float: none !important;
+        margin: 3px 40px 10px !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    nav.navbar.bootsnav .navbar-brand {
+        display: inline-block;
+        float: none !important;
+        margin: 3px 140px 10px !important;
+    }
+}
+
 @media (min-width: 1024px) {
     /* General Navbar
     =================================*/
     nav.navbar.bootsnav .navbar-brand {
         display: inline-block;
         float: none !important;
-        margin: 3px 20% 10px !important;
+        margin: 3px 40px 10px;
     }
 
     nav.navbar.bootsnav ul.nav .dropdown-menu .dropdown-menu{
