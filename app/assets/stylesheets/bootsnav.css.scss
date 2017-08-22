@@ -540,7 +540,6 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
     }
     
     nav.navbar.bootsnav ul.nav > li > a{
-        padding: 30px 15px;
         font-weight: 600;
     }
     
@@ -1491,6 +1490,24 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
     nav.bootsnav.navbar-full ul.nav{
         padding-top: 30px;
         padding-bottom: 30px;
+    }
+}
+
+@media (min-width: 1601px) {
+    nav.navbar.bootsnav ul.nav > li > a{
+        padding: 30px 25px !important;
+    }
+}
+
+@media (min-width: 1401px) and (max-width: 1600px) {
+    nav.navbar.bootsnav ul.nav > li > a{
+        padding: 30px 20px !important;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1400px) {
+    nav.navbar.bootsnav ul.nav > li > a{
+        padding: 30px 15px !important;
     }
 }
 
