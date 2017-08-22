@@ -1,7 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
 
-
 /* pageheader start */
 .pageheader{
     padding: 30px 60px 30px;
@@ -617,7 +616,6 @@ ol.menu-demo li a.jam-vip-box:hover {
 
 /* 首页盒子 start */
 .jam-index-body {
-  padding: 30px 0px;
   position: relative;
 }
 .jam-index-body .box-up {
@@ -659,6 +657,9 @@ ol.menu-demo li a.jam-vip-box:hover {
   }
 }
 @media (max-width: 767px) {
+  .jam-index-body {
+    padding: 15px 8px;
+  }
   .jam-index-body .area-title {
     padding: 5px 0px;
   }
@@ -669,9 +670,14 @@ ol.menu-demo li a.jam-vip-box:hover {
     font-size: 12px;
   }
 }
-@media (max-width: 767px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .jam-index-body {
-    padding: 15px 8px;
+    padding: 30px 0px;
+  }
+}
+@media (min-width:1200px) {
+  .jam-index-body {
+    padding: 30px 10% 0 10% !important;
   }
 }
 /* 首页盒子 end */
