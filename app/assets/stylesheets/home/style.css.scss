@@ -680,7 +680,12 @@ ol.menu-demo li a.jam-vip-box:hover {
     padding: 30px 10% 0 10% !important;
   }
 }
-@media (min-width: 1401px) {
+@media (min-width: 1401px) and (max-width:1600px) {
+  .jam-index-body {
+    padding: 30px 15% 0 15% !important;
+  }
+}
+@media (min-width: 1601px) {
   .jam-index-body {
     padding: 30px 20% 0 20% !important;
   }
