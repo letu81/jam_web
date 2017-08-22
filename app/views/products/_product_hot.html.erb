@@ -1,10 +1,10 @@
 <div class="panel panel-product">
 	<ul class="nav nav-tabs">
 		<li class="active">
-			<a href="#product-hot" data-toggle="tab">热卖单品</a>
+			<a href="#product-hot" data-toggle="tab">热卖</a>
 		</li>
 		<li>
-			<a href="#product-new" data-toggle="tab">新品上架</a>
+			<a href="#product-new" data-toggle="tab">新品</a>
 		</li>
 	</ul>
 	<div class="tab-content">
@@ -14,7 +14,7 @@
 			<%- products.each do |product| -%>
 				<a href="/products/<%= product.id %>">
 			  		<li class="list-group-item">
-						<p class="center"><%= image_tag product.images.first.url(:small) %></p>
+						<p class="center"><%= image_tag product.images.first.url(:small), size: "140x140" %></p>
 			            <p class="center"><%= product.title %></p>
 			            <p class="center vip-price">¥ <%= product.price %></p>
 				    </li>
