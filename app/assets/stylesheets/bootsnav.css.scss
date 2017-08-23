@@ -229,8 +229,9 @@ li.close-full-menu{
 .attr-nav > ul > li > a{
     color: #6f6f6f;
     display: block;
-    padding: 28px 15px;
+    padding: 28px 20px;
     position: relative;
+    font-size: 18px;
 }
 
 .attr-nav > ul > li > a span.badge{
@@ -518,7 +519,7 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
     nav.navbar.bootsnav .navbar-brand {
         display: inline-block;
         float: none !important;
-        margin: 3px 140px 10px !important;
+        margin: 3px 120px 10px !important;
     }
 }
 
@@ -1487,6 +1488,9 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
 }
 
 @media (min-width: 480px) and (max-width: 640px) {
+    nav.navbar.bootsnav .navbar-brand {
+        margin: -8px 0px 8px -60px !important;
+    }
     nav.bootsnav.navbar-full ul.nav{
         padding-top: 30px;
         padding-bottom: 30px;
@@ -1646,12 +1650,18 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
 }
 
 @media (max-width: 480px) {
-    .footer .footer-menu{
+    nav.navbar.bootsnav .navbar-brand {
+        margin: -8px 0px 8px -60px !important;
+    }
+
+    .footer .footer-section{
          display: none;
     }
 
     .footer-icp-service span.icp{
-         display: none;
+        font-size: 12px;
+        color: #999;
+        line-height: 24px;
     }
 
     .footer .footer-icp-service span.tel{
@@ -1663,7 +1673,6 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
     .footer .footer-icp-service span.time{
         font-size: 12px;
         color: #999;
-        line-height: 24px;
         padding: 0 30px 0 0;
     }
 }

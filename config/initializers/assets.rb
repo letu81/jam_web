@@ -22,10 +22,9 @@ Rails.application.config.assets.precompile += %w(
 	bootstrap.min.css
 	font-awesome.min.css
 
+    customize/customize.css
 	home/style.css
-
 	product/product.css
-	customize/customize.css
 
 	bootsnav.js
 	bootstrap.min.js

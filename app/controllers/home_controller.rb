@@ -5,7 +5,6 @@ class HomeController < ApplicationController
     @products = []
     if request.env['HTTP_USER_AGENT'].downcase.match(/android|iphone/)
       redirect_to action: :wap
-      render layout: false
     else
       product = Product.find(1)
       @products = []
