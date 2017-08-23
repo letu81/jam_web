@@ -1501,11 +1501,23 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
     nav.navbar.bootsnav ul.nav > li > a{
         padding: 30px 35px !important;
     }
+    .footer-icp-service .row .leftt-move-10{
+        padding-right: 10% !important;
+    }
+    .footer-icp-service .row .right-move-10{
+        padding-left: 10% !important;
+    }
 }
 
 @media (min-width: 1401px) and (max-width: 1600px) {
     nav.navbar.bootsnav ul.nav > li > a{
         padding: 30px 30px !important;
+    }
+    .footer-icp-service .row .leftt-move-10{
+        padding-right: 10% !important;
+    }
+    .footer-icp-service .row .right-move-10{
+        padding-left: 10% !important;
     }
 }
 
