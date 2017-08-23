@@ -459,10 +459,10 @@ ol.menu-demo li a.company-box{
     background-color: #fff;
     border: solid 2px #3f3f3f;
     color: #3f3f3f;
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -o-border-radius: 2px;
-    border-radius: 2px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
 }
 /*  partners box end */
 
@@ -501,10 +501,17 @@ ol.menu-demo li a.company-box{
                  -8px 7px #000;
 }
 
+@media (max-width: 480px) {
+  ol.menu-demo li a.grit {
+    background-image: url("http://support.nature.org/images/earth/assets/grit.png");
+  }
+}
 
-ol.menu-demo li a.grit {
-  -webkit-mask-image: url("http://support.nature.org/images/earth/assets/grit.png");
-  mask-image: url("http://support.nature.org/images/earth/assets/grit.png");
+@media (min-width: 481px) {
+  ol.menu-demo li a.grit {
+    -webkit-mask-image: url("http://support.nature.org/images/earth/assets/grit.png");
+    mask-image: url("http://support.nature.org/images/earth/assets/grit.png");
+  }
 }
 
 ol.menu-demo li a.jam-vip-box {
@@ -516,10 +523,10 @@ ol.menu-demo li a.jam-vip-box {
   cursor: pointer;
   text-decoration: none;
   text-transform: uppercase;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  -o-border-radius: 2px;
-  border-radius: 2px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
   -webkit-transition: background 0.2s, color 0.2s;
           transition: background 0.2s, color 0.2s;
 }
