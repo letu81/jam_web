@@ -4,10 +4,14 @@ class HomeController < ApplicationController
   def index
     @products = []
     if request.env['HTTP_USER_AGENT'].downcase.match(/android|iphone/)
-      redirect_to action: :wap
+      #redirect_to action: :wap
+      product = Product.find(1)
+      (1..6).each do |_|
+        @products << product
+      end
+      render layout: false
     else
       product = Product.find(1)
-      @products = []
       (1..6).each do |_|
         @products << product
       end
