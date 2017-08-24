@@ -673,7 +673,8 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
     
     nav.navbar.navbar-inverse.bootsnav.navbar-transparent.dark,
     nav.navbar.bootsnav.navbar-transparent.dark{
-        background-color: rgba(0,0,0,0.3);
+        background-image: asset_data_url('share/brick-wall-dark.png');
+        background-color: #666;
         border-bottom: solid 1px #555;
     }
     

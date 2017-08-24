@@ -3,22 +3,17 @@
 
 /* pageheader start */
 .pageheader{
-    padding: 30px 60px 30px;
     background-image: asset_data_url('share/brick-wall-dark.png');
-    background-color: #f43438;
-    border-radius: 0 0 10px 10px;
 }
 
 .pageheader .container{
     z-index: 9;
 }
 
-.pageheader.fixed-demo{
-    padding-top: 120px;
-}
-
 .pageheader.fixed-demo.dark{
    background-color: #666 !important;
+   margin: 80px 10% 0 10%;
+   border-radius: 0 0 10px 10px;
 }
 
 .pageheader.fixed-demo.white{
@@ -107,7 +102,6 @@
 .affairs .sw {
   float: left;
   width: 90%;
-  padding-left: 30px;
   font-size: 16px;
 }
 
@@ -199,11 +193,20 @@
   color: #b2b2b2;
 }
 
-@media (max-width:1023px) {
+
+@media (max-width:1199px) {
     .jam-header-bg{
-        padding: 30px 60px 30px !important;   
+      padding: 30px 60px 30px !important;   
     }
 
+    .pageheader.fixed-demo.dark{
+       background-color: #666 !important;
+       margin: 60px 8px 0 8px !important;
+       border-radius: 0 0 10px 10px;
+    }
+}
+
+@media (max-width:1023px) {
     .jobbox .jobcon .job_l {
       float: left;
       width: 50%;
@@ -337,12 +340,12 @@
 }
 
 .service-content .cus_serv{
-  margin: 6% 6% 10%;
+  margin: 6% 0;
 }
 
 .service-content .cus_serv img{
   width: 100%;
-  margin: 4% 0 7%;
+  margin: 4% 0;
 }
 
 .service-content .cus_serv ui.block{
@@ -357,7 +360,7 @@
 .service-content .cus_serv .block p{
   font-size: 1.25em;
   border-bottom: 1px solid #cccccc;
-  padding:2% 0;
+  padding:2% -20px;
   color: #333333;
 }
 
@@ -365,9 +368,9 @@
   margin-top:2%;
 }
 
-.service-content .cus_serv ui.con_info li{
+.service-content ul.con_info > li{
   list-style-type: none;
-  padding: 1% 0;
+  margin-left: -40px !important;
   font-size: 1em;
   color: #666666;
 }
@@ -376,7 +379,7 @@
   /*border: 1px solid red;*/
   list-style-type: none;
   width: 100%;
-  height: 265px;
+  height: 225px;
 }
 
 .service-content .promise div{
@@ -509,6 +512,16 @@ ol.menu-demo li a.company-box{
   ol.menu-demo li a.grit {
     background-image: url("http://support.nature.org/images/earth/assets/grit.png");
   }
+
+  .service-content .cus_serv ul.block > li{
+    margin-left: -5%;
+    list-style-type: none;
+  }
+
+  .service-content .promise .row ul > li{
+    margin-left: -5%;
+    list-style-type: none;
+  }
 }
 
 @media (min-width: 481px) {
@@ -632,6 +645,9 @@ ol.menu-demo li a.jam-vip-box:hover {
 .jam-index-body .box-up {
   margin-top: 30px;
 }
+.jam-index-body .box-down {
+  margin-top: -60px;
+}
 .jam-index-body .container {
   border: 1px solid rgba(0, 0, 0, 0.14);
   border-radius: 10px;
@@ -669,7 +685,7 @@ ol.menu-demo li a.jam-vip-box:hover {
 }
 @media (max-width: 767px) {
   .jam-index-body {
-    padding: 15px 8px;
+    padding: 30px 8px;
   }
   .jam-index-body .area-title {
     padding: 5px 0px;
@@ -683,22 +699,22 @@ ol.menu-demo li a.jam-vip-box:hover {
 }
 @media (min-width: 768px) and (max-width: 1199px) {
   .jam-index-body {
-    padding: 30px 0px;
+    padding: 60px 8px 0 8px !important;
   }
 }
 @media (min-width: 1200px) and (max-width:1400px) {
   .jam-index-body {
-    padding: 30px 10% 0 10% !important;
+    padding: 60px 10% 0 10% !important;
   }
 }
 @media (min-width: 1401px) and (max-width:1600px) {
   .jam-index-body {
-    padding: 30px 15% 0 15% !important;
+    padding: 60px 15% 0 15% !important;
   }
 }
 @media (min-width: 1601px) {
   .jam-index-body {
-    padding: 30px 20% 0 20% !important;
+    padding: 60px 20% 0 20% !important;
   }
 }
 /* 首页盒子 end */

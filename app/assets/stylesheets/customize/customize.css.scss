@@ -23,29 +23,29 @@
 
 @media (min-width: 768px) and (max-width: 1199px) {
   .jam-index-customize {
-    padding: 30px 0px;
+    padding: 60px 8px 0 8px !important;
   }
 }
 @media (min-width: 1200px) and (max-width:1400px) {
   .jam-index-customize {
-    padding: 30px 10% 0 10% !important;
+    padding: 60px 10% 0 10% !important;
   }
 }
 @media (min-width: 1401px) and (max-width:1600px) {
   .jam-index-customize {
-    padding: 30px 15% 0 15% !important;
+    padding: 60px 15% 0 15% !important;
   }
 }
 @media (min-width: 1601px) {
   .jam-index-customize {
-    padding: 30px 20% 0 20% !important;
+    padding: 60px 20% 0 20% !important;
   }
 }
 
 /* 定制 start */
 @media (max-width: 767px) {
   .jam-index-customize {
-    padding: 15px 8px;
+    padding: 30px 8px;
   }
 }
 .jam-index-customize .container {
