@@ -65,7 +65,7 @@
 
 /* jam-header-bg start */
 .jam-header-bg{
-    padding: 80px 60px 80px;
+    padding: 40px 60px 40px;
     background-image: asset_data_url('share/brick-wall-dark.png');
     background-color: #666 !important;
 }
@@ -200,6 +200,10 @@
 }
 
 @media (max-width:1023px) {
+    .jam-header-bg{
+        padding: 30px 60px 30px !important;   
+    }
+
     .jobbox .jobcon .job_l {
       float: left;
       width: 50%;

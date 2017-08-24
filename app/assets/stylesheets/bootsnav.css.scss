@@ -1012,12 +1012,16 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
 @media (max-width: 1023px) {
     /* Navbar Responsive
     =================================*/ 
+    nav.navbar.bootsnav {
+        min-height: 60px !important;
+    }
+
     nav.navbar.bootsnav .navbar-brand    {
         display: inline-block;
         float: none !important;
         margin: -8px 0px 8px !important;
     }
-    
+
     nav.navbar.bootsnav .navbar-header {
         float: none;
         display: block;
