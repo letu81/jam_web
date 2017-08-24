@@ -53,8 +53,13 @@ nav.navbar.bootsnav{
 }
 
 nav.navbar.bootsnav ul.nav > li > a{
-    color: #6f6f6f;
+    color: #003333;
     background-color: transparent !important;
+}
+
+nav.navbar.bootsnav ul.nav > li > a:hover,
+nav.navbar.bootsnav ul.nav > li > a:focus{
+    color: rgb(19, 234, 164) !important;
 }
 
 nav.navbar.bootsnav ul.nav li.megamenu-fw > a:hover,
@@ -83,6 +88,11 @@ nav.navbar.bootsnav ul.nav ul.dropdown-menu > li > a{
     white-space:normal;
 }
 
+nav.navbar.bootsnav ul.nav ul.dropdown-menu > li > a:hover,
+nav.navbar.bootsnav ul.nav ul.dropdown-menu > li > a:focus{
+    color: rgb(19, 234, 164) !important;
+    white-space:normal;
+}
 
 ul.menu-col{
     padding: 0;
