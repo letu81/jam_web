@@ -1060,3 +1060,15 @@ ol.menu-demo li a.jam-vip-box:hover {
 .tab-pane p.no-results {
   margin: 10px 15px;
 }
+
+.carousel-control.left > i,
+.carousel-control.right > i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.carousel-control.right > i {
+  left: auto;
+  right: 10px;
+}
