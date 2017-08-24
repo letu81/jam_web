@@ -95,14 +95,6 @@
 </div>
 
 <script type="text/javascript">
-  var _hmt = _hmt || [];
-  (function() {
-    var hm = document.createElement("script");
-    hm.src = "//hm.baidu.com/hm.js?<%= SiteConfig.bda_key %>";
-    var s = document.getElementsByTagName("script")[0]; 
-    s.parentNode.insertBefore(hm, s);
-  })();
-
   $(document).ready(function(){
     $(".jam-scroll-top").click(function(){
       $('html,body').animate({'scrollTop':0},300);
@@ -118,5 +110,8 @@
     if(window.console){
       console.log("联系我们 QQ:1756992323 Wechat:letu86");
     }
+  });
+  $(window).load(function() { 
+    $(".loading").hide();
   });
 </script>
