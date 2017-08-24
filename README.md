@@ -1,4 +1,4 @@
-rvm use 2.3.0
+rvm use 2.4.0
 bundle install
 bundle exec rake db:create
 bundle exec rake db:migrate
