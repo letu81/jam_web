@@ -434,7 +434,9 @@ ol.menu-demo li a.company-box{
 
 @media (max-width: 480px) {
   ol.menu-demo li a.grit {
-    background-image: url("http://support.nature.org/images/earth/assets/grit.png");
+    background-image: asset_data_url('share/grit.png');
+    -webkit-mask-image: asset_data_url('share/grit.png');
+    mask-image: asset_data_url('share/grit.png');
   }
 
   .service-content .cus_serv ul.block > li{
@@ -450,8 +452,8 @@ ol.menu-demo li a.company-box{
 
 @media (min-width: 481px) {
   ol.menu-demo li a.grit {
-    -webkit-mask-image: url("http://support.nature.org/images/earth/assets/grit.png");
-    mask-image: url("http://support.nature.org/images/earth/assets/grit.png");
+    -webkit-mask-image: asset_data_url('share/grit.png');
+    mask-image: asset_data_url('share/grit.png');
   }
 }
 
