@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  #caches_page :index, :about, :contact, :detail, :dynamic, :news, :faq, :jobs, :partners, :service, :wap
+  caches_page :about, :contact, :detail, :dynamic, :news, :faq, :jobs, :partners, :service, :wap
 
   def index
     @products = []

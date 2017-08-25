@@ -1,5 +1,5 @@
 class CustomizeController < ApplicationController
-  #caches_page :index, :app, :web, :gateway, :lock, :dynamic, :wechat_subscription, :wechat_applet
+  #caches_page :index, :app, :web, :gateway, :lock, :dynamic, :wechat_subscription, :wechat_applet, :alipay_applet
 
   def index
     render layout: false
