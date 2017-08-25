@@ -159,40 +159,11 @@
 }
 /* 商务合作 end */
 
-/* 诚聘英才 start */
-.jobbox {
-  width: 100%;
-  overflow: hidden;
-  line-height: 28px;
-}
-
-.jobbox .jobcon {
-  width: 100%;
-  overflow: hidden;
-  padding: 0 20px 0 20px;
-  line-height: 26px;
-}
-
-.jobbox h1 {
-  padding: 20px 40px;
-  font-size: 24px;
-  margin-bottom: 30px;
-}
-
-.jobbox .jobcon h3 {
+.job-title {
   color: #00c6ff;
   padding: 10px 0;
   font-size: 16px;
 }
-
-.jobbox .jobcon dl {
-  padding: 10px 0
-}
-
-.jobbox .jobcon dl dt {
-  color: #b2b2b2;
-}
-
 
 @media (max-width:1199px) {
     .jam-header-bg{
@@ -205,47 +176,6 @@
        border-radius: 0 0 10px 10px;
     }
 }
-
-@media (max-width:1023px) {
-    .jobbox .jobcon .job_l {
-      float: left;
-      width: 50%;
-    }
-
-    .jobbox .jobcon .job_r {
-      float: right;
-      width: 50%;
-    }
-}
-
-@media (min-width: 1024px) and (max-width:1199px) {
-    .jobbox .jobcon .job_l {
-      float: left;
-      width: 50%;
-      padding: 0 10px;
-    }
-
-    .jobbox .jobcon .job_r {
-      float: right;
-      width: 50%;
-      padding: 0 10px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .jobbox .jobcon .job_l {
-      float: left;
-      width: 50%;
-      padding: 0 20px;
-    }
-
-    .jobbox .jobcon .job_r {
-      float: right;
-      width: 50%;
-      padding: 0 20px;
-    }
-}
-/* 诚聘英才 end */
 
 /* 关于 公司简介 start */
 .about_intro{
@@ -1067,14 +997,42 @@ ol.menu-demo li a.jam-vip-box:hover {
   right: 10px;
 }
 
-.loading{  
-  text-align: center;
-  width: 150px;
-  height: 15px;
-  margin: 0 30% 0 30%;
-  padding-right: 10%;
-  position: relative;
+@media (min-width: 1401px) {
+  .loading{
+    width: 150px;
+    height: 15px;
+    margin: 0 40% 0 40%;
+    position: relative;
+  }
 }
+
+@media (min-width: 768px) and (max-width: 1400px) {
+  .loading{
+    width: 150px;
+    height: 15px;
+    margin: 0 35% 0 35%;
+    position: relative;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 767px) {
+  .loading{
+    width: 150px;
+    height: 15px;
+    margin: 0 25% 0 25%;
+    position: relative;
+  }
+}
+
+@media (max-width: 640px) {
+  .loading{
+    width: 150px;
+    height: 15px;
+    margin: 0 20% 0 20%;
+    position: relative;
+  }
+}
+
 .loading span{
   position: absolute;
   width: 15px;
