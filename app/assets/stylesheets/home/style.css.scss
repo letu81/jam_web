@@ -71,95 +71,13 @@
     min-height: 100px;
 }
 
-/* 商务合作 start */
-.affairs {
-  width: 100%;
-  overflow: hidden;
-  line-height:8px;
-}
-
-.affairs h3 {
-  padding: 20px 0;
-  font-size: 24px;
-  margin-bottom: 30px;
-}
-
-.affairs .sw_l {
-  float: left;
-  width: 50%;
-  padding-left: 40px;
-  font-size: 16px;
-}
-
-.affairs .sw_l dl {
-  padding: 10px 0;
-}
-
-.affairs .sw_l dl dt {
-  color: #00c6ff;
-}
-
-.affairs .sw {
-  float: left;
-  width: 90%;
-  font-size: 16px;
-}
-
-.affairs .sw dl {
-  padding: 10px 0;
-}
-
-.affairs .sw p {
-  padding: 10px 0
-}
-
-.affairs .sw dl dt {
-  color: #00c6ff;
-}
-
-.affairs .sw_r {
-  float: right;
-  width: 50%;
-  padding-right: 40px;
-}
-
-.affairs .sw_r p {
-  padding: 10px 0
-}
-
-.affairs .sw_r input.inp {
-  border: #c7d1d7 1px solid;
-  height: 20px;
-  font-size: 16px;
-  outline: none;
-  width: 400px;
-  padding: 10px;
-}
-
-.affairs .sw_r textarea {
-  border: #c7d1d7 1px solid;
-  height: 150px;
-  font-size: 16px;
-  outline: none;
-  width: 400px;
-  padding: 10px;
-  resize: none
-}
-
-.affairs .sw_r input.but {
-  height: 48px;
-  font-size: 18px;
-  width: 150px;
-  text-align: center;
-  border: 0;
-  background: #00c1eb;
-  color: #fff;
-  border-radius: 30px;
-  cursor: pointer
-}
-/* 商务合作 end */
-
 .job-title {
+  color: #00c6ff;
+  padding: 10px 0;
+  font-size: 16px;
+}
+
+.contact-title {
   color: #00c6ff;
   padding: 10px 0;
   font-size: 16px;
@@ -1071,3 +989,7 @@ h2.text-slogan {
   }
 }
 /* loading end */
+
+.carousel-indicators {
+  z-index: 8 !important;
+}
