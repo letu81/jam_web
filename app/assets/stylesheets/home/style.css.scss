@@ -971,8 +971,11 @@ h2.text-slogan {
   -webkit-animation: loading-gif 0.75s 0s linear infinite;
   animation: loading-gif 0.75s 0s linear infinite;
   position: absolute;
-  top: 20px;
+  top: 15px;
   left: 55px;
+}
+.load-btn p {
+  margin: 0 0 0 10px !important;
 }
 @keyframes loading-gif {
   0% {
