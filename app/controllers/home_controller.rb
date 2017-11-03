@@ -58,4 +58,8 @@ class HomeController < ApplicationController
   def wap
     render layout: false
   end
+
+  def test
+    render layout: false
+  end
 end

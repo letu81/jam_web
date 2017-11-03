@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get 'faq' => 'home#faq', as: :faq
   get 'partners' =>'home#partners', as: :partners
   get 'wap' => 'home#wap', as: :wap
+  get 'test' => 'home#test', as: :test
 
   get 'download' => 'download#index', as: :download
   post 'feedback' => 'home#feedback', as: :feedback
