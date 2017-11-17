@@ -15,9 +15,11 @@ Rails.application.routes.draw do
   get 'partners' =>'home#partners', as: :partners
   get 'wap' => 'home#wap', as: :wap
   get 'test' => 'home#test', as: :test
+  get 'privacy' => 'home#privacy', as: :privacy
 
   get 'download' => 'download#index', as: :download
   post 'feedback' => 'home#feedback', as: :feedback
+
 
   get '/customize' => 'customize#index', as: :customize
   get '/customize/app' => 'customize#app', as: :customize_app
