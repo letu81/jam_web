@@ -60,8 +60,17 @@
     })
 
     function is_weixin() {
-      var ua = navigator.userAgent.toLowerCase();
+      var ua = window.navigator.userAgent.toLowerCase();
       if (ua.match(/MicroMessenger/i) == "micromessenger") {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    function is_ios() {
+      var ua = window.navigator.userAgent.toLowerCase();
+      if (ua.match(/(iPhone|iPod|ios|iOS|iPad)/i)) {
         return true;
       } else {
         return false;
@@ -72,8 +81,10 @@
         var isWeixin = is_weixin();
         var winHeight = $(window).height();
         if(isWeixin){
-          $(".weixin-tip").css("height",winHeight);
-          $(".weixin-tip").show();
+          if (!is_ios) {
+            $(".weixin-tip").css("height",winHeight);
+            $(".weixin-tip").show();
+          }
         }
     });
 </script>
