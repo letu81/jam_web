@@ -16,8 +16,10 @@ Rails.application.routes.draw do
   get 'wap' => 'home#wap', as: :wap
   get 'test' => 'home#test', as: :test
   get 'privacy' => 'home#privacy', as: :privacy
+  get 'app' => 'home#app', as: :app
 
   get 'download' => 'download#index', as: :download
+  get 'download/:version' => 'download#show', as: :download_version
   post 'feedback' => 'home#feedback', as: :feedback
 
 

@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  caches_page :about, :contact, :detail, :dynamic, :news, :faq, :jobs, :partners, :service, :wap, :privacy
+  caches_page :about, :contact, :detail, :dynamic, :news, :faq, :jobs, :partners, :service, :wap, :privacy, :app
 
   def index
     @products = []
@@ -60,6 +60,10 @@ class HomeController < ApplicationController
   end
 
   def privacy
+    render layout: false
+  end
+
+  def app
     render layout: false
   end
 
