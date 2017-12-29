@@ -67,7 +67,7 @@ class HomeController < ApplicationController
     render layout: false
   end
 
-  def test
+  def download
     render layout: false
   end
 end
