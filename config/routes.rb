@@ -40,6 +40,7 @@ Rails.application.routes.draw do
   end
 
   get 'search' => 'search#query', as: :search
+  get '/lock/password' => 'search#password', as: :lock_password
 
   ######################### 微信公众平台开发 ###########################
   post '/wechat' => 'weixin/home#welcome', defaults: { format: 'xml' }
