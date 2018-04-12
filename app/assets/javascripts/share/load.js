@@ -1,23 +1,4 @@
-var demoImgArray = [
-    '/images/share/page01.jpg',
-    '/images/share/page02.jpg',
-    '/images/share/page03.jpg',
-    '/images/share/page04.jpg',
-    '/images/share/s-up.png',
-    '/images/share/ico1.png',
-    '/images/share/code.png',
-    '/images/share/jmtext.png',
-    '/images/share/jmtext2.png',
-    '/images/share/kcico1.png',
-    '/images/share/kcico3.png',
-    '/images/share/kcico4.png',
-    '/images/share/music.png',
-    '/images/share/telico.png',
-    '/images/share/vitu.png',
-    '/images/share/logo.png',
-    '/images/share/fottu1.png',
-    '/images/share/fottu2.png',
-    '/images/share/fottu3.png'];
+var demoImgArray = [];
 var stripesAnim;
 var calcPercent;
 $progress = $('.progress-bar');
